@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Random Number Game</h1>
+  <h3>Fenerate a number between 0 and<input type="number" id="input" value="0"/></h3>
+  <p>Guess the number: <input type="number" id="guess" value="0"><button id="button" onclick="btnClick()">Play!</button></p>
+  <span>You chose: </sapn><span id="guessNumber"></span><span>, the machin chose: </sapn><span id="machineNumber"></span><span>.</sapn>
+  <p id="result"></p>
+  <script>
+    const result = document.querySelector("#result");
+    const input = document.querySelector("#input");
+    const guess = document.querySelector("#guess");
+    const guessNumber = document.querySelector("#guessNumber");
+    const machineNumber = document.querySelector("#machineNumber");
+    const button = document.querySelector("#button");
+    function btnClick(){
+      const currentNum = Math.ceil(Math.random() * input.value);
+      machineNumber.innerText = currentNum;
+      guessNumber.innerText = guess.value;
+      if(parseInt(guess.value) === currentNum){
+        result.innerText = "You won!"
+      }else{
+        result.innerText = "You lost!"
+      }
+    }
+  </script>
+</body>
+</html>
