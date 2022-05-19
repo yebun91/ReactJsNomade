@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button
+    style="display: block; margin: 0 auto; margin-top: 200px;"
+  >
+    click me!
+  </button>
+  <script>
+    const button = document.querySelector("button");
+    button.onclick = () => {
+      const HEXCODE1 =  `#` + getRandom(100000, 999999);
+      const HEXCODE2 =  `#` + getRandom(100000, 999999);
+      document.querySelector("body").style.backgroundImage = `linear-gradient(0.25turn, ${HEXCODE1}, ${HEXCODE2})`;
+    };
+    
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+  </script>
+</body>
+</html>
