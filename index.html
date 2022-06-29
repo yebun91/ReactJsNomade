@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="promise.js"></script>
+</head>
 <body>
-    <div id="root"></div>
 </body>
-<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-<script>
-    const span = React.createElement("span", {
-
-    }, "Total Clicks: ");
-    const h3 = React.createElement("h3", {
-        onMouseEnter: () => console.log("mouse enter"),
-    }, "Hello I'm a h3")
-    const button = React.createElement("button", {
-        onClick: () => console.log("클릭됨")
-    }, "Click me!");
-    const container = React.createElement("div", null, [h3, span, button]);
-
-
-    ReactDOM.render(container, document.getElementById("root"));
-</script>
 </html>
