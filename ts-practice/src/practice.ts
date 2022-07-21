@@ -1,9 +1,9 @@
 let count = 0;
 count += 1;
 // count = "갑자기 분위기 문자열";
-const message:string = 'hello';
-const done:boolean = true;
-const number:number[] = [1,2,3];
+const message: string = 'hello';
+const done: boolean = true;
+const number: number[] = [1,2,3];
 const messages: string[] = ["hello", "how", "are", "you"];
 
 // messages.push(1); //숫자 넣으려고 하면 안됨
